@@ -15,7 +15,7 @@ if(isset($_POST['update_data'])){
     $from=$_POST['from_import'];
     mysqli_query($connect,"UPDATE phone SET name_phone='$name', color_phone='$color', from_import='$from' WHERE id_phone='$_GET[id]'");
     echo "<script>alert('Data Berhadil diubah!')</script>";
-    echo "<script>window.location='http://localhost/latihanSatu/dashboard.php'</script>";
+    echo "<script>window.location='http://localhost/phoneShel/dashboard.php'</script>";
 }
 
 

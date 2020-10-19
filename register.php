@@ -4,7 +4,7 @@ require_once('config.php');
     if(isset($_POST['register'])){
         if(register($_POST) > 0 ) {
             echo "<script>alert('User berhasil ditambahkan!');
-                window.location='http://localhost/latihanSatu/login.php'
+                window.location='http://localhost/phoneShel/login.php'
             </script>";
         }else{
             echo "<script>alert('Data gagal ditambahkan!')</script>";
