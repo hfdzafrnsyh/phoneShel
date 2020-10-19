@@ -1,5 +1,10 @@
 <?php 
 require_once('config.php');
+session_start();
+
+if($_SESSION['status'] != "login"){
+    header('location:index.php');
+}
 
 $data=mysqli_query($connect,"SELECT * FROM phone WHERE id_phone='$_GET[id]'");
 $phone=$data->fetch_assoc();
@@ -47,7 +52,7 @@ if(isset($_POST['update_data'])){
                 <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
+                <a class="nav-link" href="logout.php">Logout</a>
             </ul>
             <li class="nav-item">
                 <a class="nav-link" href="register.php">Register</a>
